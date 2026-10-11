@@ -31,7 +31,9 @@ The target is binary: '0 = Normal' and '1 = Attack'. 'attack_cat' is retained fo
 Python 3.10 or newer is recommended. Install the notebook dependencies:
 
 '''bash
-python -m pip install numpy pandas matplotlib scikit-learn jupyter
+python3 -m venv .venv
+source .venv/bin/activate
+pip install numpy pandas matplotlib scikit-learn jupyter
 '''
 
 Open 'intrusion_detection.ipynb' in VS Code or Jupyter with the project directory as the working directory, then run all cells from top to bottom. Keep the final held-out test-evaluation cell at the end of the notebook as later project parts are added. The notebook currently uses the full cleaned dataset; runtime depends on the local machine.
