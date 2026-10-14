@@ -1,6 +1,6 @@
 # Explainable Network Intrusion Detection
 
-This project builds and evaluates a binary network intrusion detector using the UNSW-NB15 dataset. The current notebook implements Parts A, B, and C of the mini-project brief.
+This project builds and evaluates a binary network intrusion detector using the UNSW-NB15 dataset. The notebook implements Parts A–G of the mini-project brief.
 
 ## Dataset
 
