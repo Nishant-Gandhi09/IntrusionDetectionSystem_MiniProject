@@ -20,11 +20,10 @@ The target is binary: '0 = Normal' and '1 = Attack'. 'attack_cat' is retained fo
 - **Part A:** Describes the detection problem; loads and cleans the CSV files; reports dataset size, class balance, missing feature values, a class-balance plot, and a stratified 60/20/20 train/validation/test split. A majority-class baseline is reported with the model metrics.
 - **Part B:** Trains Logistic Regression and Decision Tree models as interpretable baselines and a Random Forest as the black-box model. Preprocessing is fitted on training data. Candidate settings are compared using validation Macro-F1; the held-out test evaluation is at the notebook's end.
 - **Part C:** Compares the full-label Random Forest with a Random Forest trained on 10% of training labels and a pseudo-labeling approach using the remaining training features. Confidence cutoffs are selected on validation data.
-- **Part D:**
-- **Part E:**  
-- **Part F:** 
-- **Part G:** 
-
+- **Part D:** Explains model behavior using feature importance, SHAP, and LIME. It compares important features across models, shows local explanations for selected validation flows, and checks SHAP fidelity and LIME stability.
+- **Part E:** Tests robustness to missing feature information by replacing increasing fractions of validation features with training-set medians or modes. Results are averaged over repeated trials and reported for Logistic Regression, Decision Tree, and Random Forest.
+- **Part F:** Builds an interpretable Belief Rule Base from 'sttl' and 'dttl'. Nine rules are estimated from training data, combined with Evidential Reasoning, and compared with two-feature tree and forest models on validation data. The part also demonstrates how the rule base represents uncertainty when an input is missing.
+- **Part G:** Tests adaptability to unseen attack categories by training a Random Forest without one attack type at a time, measuring performance on the held-out test partition, then retraining with 100 labelled training examples of the hidden type across three random seeds.
 
 ## Environment and Run
 
